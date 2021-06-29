@@ -20,6 +20,8 @@ public class DynamicArrayDemo {
 		System.out.println("Size of the Dynamic Array : "+dynamicArray.dynamicArraySize());
 		System.out.println("The item is found at inex : "+dynamicArray.searchItem(99));
 		System.out.println("Max element in the array : "+dynamicArray.maxElement());
+		dynamicArray.insertAt(2, 90);
+		dynamicArray.printDynamicArray();
 	}
 
 }

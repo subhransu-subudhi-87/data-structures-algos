@@ -67,4 +67,11 @@ public class DynamicArray<T> {
 		return max;
 	}
 	
+	//Update array using index
+	public void insertAt(int index,int item) {
+		if(index < 0 || index >= count)
+			throw new IllegalArgumentException();
+		dynamicArray[index] = item;
+	}
+	
 }//End of the Class
