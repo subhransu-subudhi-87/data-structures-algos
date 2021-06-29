@@ -74,4 +74,16 @@ public class DynamicArray<T> {
 		dynamicArray[index] = item;
 	}
 	
+	//Reverse the array
+	public int[]  reverseArray() {
+		//1. Create a new array with size = count(elements in the old array)
+		int[] reversedArray = new int[count];
+		//2. Hold the number of elements in the Old array in a variable
+		int oldArrayIndex = count;
+		for(int i = 0 ; i < count ; i++) 
+		//3. 
+			reversedArray[i] = dynamicArray[--oldArrayIndex];
+		return reversedArray;
+	}
+	
 }//End of the Class
