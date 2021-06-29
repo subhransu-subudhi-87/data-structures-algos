@@ -15,10 +15,11 @@ public class DynamicArrayDemo {
 		dynamicArray.insert(63);
 		dynamicArray.insert(23);
 		dynamicArray.insert(99);
-		dynamicArray.removeAt(2);
+//		dynamicArray.removeAt(2);
 		dynamicArray.printDynamicArray();
 		System.out.println("Size of the Dynamic Array : "+dynamicArray.dynamicArraySize());
 		System.out.println("The item is found at inex : "+dynamicArray.searchItem(99));
+		System.out.println("Max element in the array : "+dynamicArray.maxElement());
 	}
 
 }

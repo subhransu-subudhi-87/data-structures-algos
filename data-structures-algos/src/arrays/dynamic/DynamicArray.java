@@ -55,4 +55,16 @@ public class DynamicArray<T> {
 		return -1;
 	}
 	
+	//find-max Element in the array
+	public int maxElement() {
+		//1. Assign first element of the array as max element
+		int max = dynamicArray[0];
+		for(int i = 0 ; i < count ; i++) {
+		//2. Compare each element of the array to the max and update as required
+			  if(max < dynamicArray[i+1]) 
+				    max = dynamicArray[i+1]; 
+		}
+		return max;
+	}
+	
 }//End of the Class
