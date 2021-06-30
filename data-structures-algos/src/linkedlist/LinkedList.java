@@ -1,5 +1,7 @@
 package linkedlist;
 
+import java.util.NoSuchElementException;
+
 public class LinkedList {
 	
 	private class Node<T> {
@@ -38,7 +40,7 @@ public class LinkedList {
 	
 	public void printLinkedList() {
 		if(isEmpty())
-			 return;
+			 throw new NoSuchElementException();
 		Node tempHead = head;
 		while(tempHead != null) {
 			System.out.println(tempHead.data);
@@ -62,4 +64,39 @@ public class LinkedList {
 		boolean status = (!isEmpty() && indexOf(item) != -1)?true:false;
 		return status;
 	}
+	
+	public void removeFirst() {
+		if(isEmpty())
+			throw new NoSuchElementException();
+		//1.If the LinkedList contains only one element
+		if(head == tail)
+		{
+			head=tail=null;
+			return;
+		}
+      head = head.next;		
+	}
+	//Get the last element
+	/*
+	 * public int getLast() { return (int)tail.data; }
+	 */
+	public void removeLast() {
+		if(head == tail)
+		{
+			head=tail=null;
+			return;
+		}
+		else {
+			Node previous = head;
+			while(previous != null) {
+				if(previous.next == tail) {
+					tail = previous;
+					previous.next = null;
+					return;
+				}
+				previous = previous.next;
+			}
+				}
+	}
+
 }

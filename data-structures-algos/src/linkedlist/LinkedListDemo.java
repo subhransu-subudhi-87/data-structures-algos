@@ -12,6 +12,11 @@ public class LinkedListDemo {
 		linkedList.printLinkedList();
 		System.out.println("The index is : "+linkedList.indexOf(4));
 		System.out.println("The item exists : "+linkedList.contains(33));
+		linkedList.removeFirst();
+		linkedList.printLinkedList();
+//		System.out.println("Last element in the List : "+linkedList.getLast());
+		linkedList.removeLast();
+		linkedList.printLinkedList();
 	}
 
 }
