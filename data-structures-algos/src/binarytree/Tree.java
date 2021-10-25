@@ -77,4 +77,27 @@ public class Tree {
 		preOrderTraversal(root);
 	}
 	
+	//InOrder Traversal of Binary Tree
+	private void inOrderTraversal(Node root) {
+		if(root == null)
+			return;
+		inOrderTraversal(root.leftChild);
+		System.out.println(root);
+		inOrderTraversal(root.rightChild);
+	}
+	public void inOrderTraversal() {
+		inOrderTraversal(root);
+	}
+	
+	//PostOrder Traversal of Binary Tree
+		private void postOrderTraversal(Node root) {
+			if(root == null)
+				return;
+			postOrderTraversal(root.leftChild);
+			postOrderTraversal(root.rightChild);
+			System.out.println(root);
+		}
+		public void postOrderTraversal() {
+			postOrderTraversal(root);
+		}
 }
