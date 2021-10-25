@@ -100,4 +100,36 @@ public class Tree {
 		public void postOrderTraversal() {
 			postOrderTraversal(root);
 		}
+		
+		//Calculate Height of a Tree
+		private int getTreeHeight(Node root) {
+			if(root == null)
+				return -1;
+			if(root.leftChild == null && root.rightChild == null)
+				return 0;
+			return 1+Math.max(getTreeHeight(root.leftChild), getTreeHeight(root.rightChild));
+		}
+		public int getTreeHeight() {
+			return getTreeHeight(root);
+		}
+		
+		//Find min value in a Binary Tree
+		//Note : The algo used is post-order traversal , as we need to evaluate the leaf nodes first
+		private int findMin(Node root) {
+			if(root == null)
+				return -1;
+			//If root node has no leaf nodes , then return the value of the root
+			if(isLeaf(root))
+				return root.value;
+			int left = findMin(root.leftChild);
+			int right = findMin(root.rightChild);
+			return Math.min(Math.min(left, right),root.value);
+		}
+		
+		private boolean isLeaf(Node node) {
+			return node.leftChild == null && node.rightChild == null;
+		}
+		public int findMin() {
+			return findMin(root);
+		}
 }
