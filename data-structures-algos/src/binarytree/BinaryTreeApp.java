@@ -15,6 +15,8 @@ public class BinaryTreeApp {
         System.out.println("Done");
         System.out.println(tree.find(10));
         tree.preOrderTraversal();
+        System.out.println("The height of the tree is : "+tree.getTreeHeight() );
+        System.out.println("The min value in the tree is : "+tree.findMin() );
 	}
 
 }
